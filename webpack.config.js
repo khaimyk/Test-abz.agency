@@ -5,7 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
+    publicPath: '/Test-abz.agency-/',
     clean: true,
   },
   resolve: {
@@ -27,6 +28,11 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
