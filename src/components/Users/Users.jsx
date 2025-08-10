@@ -3,7 +3,7 @@ import './Users.scss';
 import { Tooltip } from '../hooks/Tooltip';
 import DEFAULT_AVATAR from '../../assets/photo-cover.svg';
 import { Preloader } from '../hooks/Preloader';
-import { getUniqueKey } from '../hooks/UniqueKey';
+import { getUniqueKey } from '../hooks/key';
 
 export const Users = ({ users, isLoading, loadMoreUsers, hasMore }) => {
   return (
