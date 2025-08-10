@@ -45,7 +45,7 @@ const UserSection = () => {
     fetchInitialData();
   }, []);
 
-  // Функція для завантаження наступної сторінки юзерів
+ 
   const loadMoreUsers = async () => {
     if (!nextUrl) return;
     setIsLoading(true);
@@ -64,10 +64,9 @@ const UserSection = () => {
     }
   };
 
-  // Функція для додавання нового користувача
   const addUser = async newUser => {
     try {
-      // Перезавантажуємо першу сторінку (6 користувачів) щоб оновити список
+    
       const res = await fetch(`${API_BASE}/users?count=${PAGE}`);
       const data = await res.json();
       const sorted = [...data.users].sort(
