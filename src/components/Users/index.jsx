@@ -12,7 +12,7 @@ const UserSection = () => {
   const [nextUrl, setNextUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Завантажуємо початкові дані: users, positions, token
+ 
   useEffect(() => {
     const fetchInitialData = async () => {
       setIsLoading(true);
@@ -26,7 +26,7 @@ const UserSection = () => {
         const positionsData = await positionsRes.json();
         const tokenData = await tokenRes.json();
 
-        // Сортуємо юзерів за датою реєстрації
+        
         const sortedUsers = [...usersData.users].sort(
           (a, b) => b.registration_timestamp - a.registration_timestamp
         );
