@@ -1,0 +1,25 @@
+.tooltip {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip__text {
+  background: rgba(0, 0, 0, 0.87);
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px 12px;
+  z-index: 9999;
+  text-align: center;
+}
+
+.tooltip__portal {
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}

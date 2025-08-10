@@ -1,0 +1,44 @@
+.header {
+  background-color: #fff;
+  height: 60px;
+  width: 100%;
+
+  .container {
+    padding: 13px 16px;
+    max-width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 26px;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      padding: 13px 32px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding: 13px 60px;
+    }
+  }
+
+  @media (min-width: 1170px) {
+    .container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 13px 0;
+    }
+  }
+}

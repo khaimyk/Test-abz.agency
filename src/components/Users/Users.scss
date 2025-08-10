@@ -1,0 +1,90 @@
+.users {
+  &__container {
+    position: relative;
+    z-index: 1;
+    margin: 140px 16px;
+
+    @media (min-width: 768px) {
+      margin: 140px 32px;
+    }
+
+    @media (min-width: 1024px) {
+      margin: 140px 60px;
+    }
+
+    @media (min-width: 1170px) {
+      padding: 140px 1px;
+      max-width: 1170px;
+      margin: 0 auto;
+    }
+  }
+
+  &__cards-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(328px, 1fr));
+    gap: 20px;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 29px;
+    }
+  }
+  &__card {
+    width: 328px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+    @media (min-width: 768px) {
+      width: 344px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 282px;
+    }
+    @media (min-width: 1170px) {
+      width: 370px;
+    }
+    &__img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      padding: 20px 0;
+      object-fit: cover;
+    }
+
+    &__name,
+    &__info {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      overflow: visible;
+    }
+
+    &__info {
+      padding-bottom: 20px;
+      text-align: center;
+
+      > * {
+        display: block;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
